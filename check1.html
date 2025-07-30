@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>check</title>
+  <script>
+    function checkNumber() {
+      let num = parseInt(prompt("Enter a positive integer:"));
+      if (isNaN(num) || num <= 0) {
+        alert("Please enter a valid positive integer.");
+        return;
+      }
+
+      let sum = 0;
+      for (let i = 1; i <= num / 2; i++) {
+        if (num % i === 0) {
+          sum += i;
+        }
+      }
+
+      let result;
+      if (sum === num) {
+        result = "Perfect Number";
+      } else if (sum > num) {
+        result = "Abundant Number";
+      } else {
+        result = "Deficient Number";
+      }
+
+      // This alert must be inside the function
+      alert("The number " + num + " is a " + result + ".");
+    }
+  </script>
+</head>
+<body>
+  <button onclick="checkNumber()">Click it</button>
+</body>
+</html>
