@@ -1,0 +1,24 @@
+
+<html>
+<head>
+  <title>Change Background Color</title>
+  <script>
+
+    let colors = ["beige", "lavender", "honeydew", "misty rose", "light cyan", "linen"];
+    let index = 0;
+
+    function changeColor() {
+      document.body.style.backgroundColor = colors[index];
+      
+
+      index = (index + 1) % colors.length;
+    }
+  </script>
+</head>
+<body>
+<marquee>
+  <h1>Click the button to change background color</h1></marquee>
+ <center><button onclick="changeColor()">Change Color</button>
+</center>
+</body>
+</html>
